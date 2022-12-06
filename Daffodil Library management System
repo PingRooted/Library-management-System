@@ -32,18 +32,21 @@ int main(){
 
     while(1){
         system("cls");
-        printf("\t\t\t**************Md*****Zahidul********islam****************");
-    printf("\n\t\t\t***                                                   ***");
-    printf("\n\t\t\t***         Daffodil Library management System        ***");
-    printf("\n\t\t\t***                                                   ***");
-    printf("\n\t\t\t*************221********35*******1082********************");
-
-        printf("\n \t\t\t1.Add Book\n");
-        printf("\n \t\t\t2.Books List\n");
-        printf("\n \t\t\t3.Remove Book\n");
-        printf("\n \t\t\t4.Issue Book\n");
-        printf("\n \t\t\t5.Issued Book List\n");
-        printf("\n \t\t\t0.Exit\n\n");
+        printf("\t\t\t************=====Md=====Zahidul=====islam=====************");
+    printf("\n\t\t\t***                                                    ***");
+    printf("\n\t\t\t***          Daffodil Library management System        ***");
+    printf("\n\t\t\t***                                                    ***");
+    printf("\n\t\t\t**************=====221=====35=====1082=====***************");
+printf("\n\t\t\t==========================================================");
+printf("\n");
+printf("\n");
+        printf("\n \t\t\t                      1.Add Book\n");
+        printf("\n \t\t\t                      2.Books List\n");
+        printf("\n \t\t\t                      3.Remove Book\n");
+        printf("\n \t\t\t                      4.Issue Book\n");
+        printf("\n \t\t\t                      5.Issued Book List\n");
+        printf("\n \t\t\t                      0.Exit\n\n");
+        printf("\n\t\t\t==========================================================");
         printf("\n \t\t\tNow Enter your choice: ");
         scanf("%d", &ch);
 
@@ -103,8 +106,9 @@ void addBook(){
     fflush(stdin);
     gets(b.authorName);
 
-
-    printf("\n \t\t\tBook Added Successfully");
+printf("                              ================================================\n");
+    printf("                                    Book Added Successfully In your library\n");
+    printf("                              ================================================= \n");
 
     fwrite(&b, sizeof(b), 1, fp);
     fclose(fp);
@@ -114,11 +118,11 @@ void addBook(){
 void booksList(){
 
     system("cls");
-    printf("\t\t\t**********Md*****Zahidul********islam**********");
-    printf("\n\t\t\t***                                         ***");
-    printf("\n\t\t\t***            Available Books              ***");
-    printf("\n\t\t\t***                                         ***");
-    printf("\n\t\t\t*********221******35*******1082****************");
+    printf("\t\t\t************=====Md=====Zahidul=====islam=====************");
+    printf("\n\t\t\t      ***                                         ***");
+    printf("\n\t\t\t      ***            Available Books              ***");
+    printf("\n\t\t\t      ***                                         ***");
+    printf("\n\t\t\t**************=====221=====35=====1082=====***************");
     printf("\n");
     printf("\n");
     printf("\n");
@@ -135,7 +139,9 @@ void booksList(){
 void del(){
     int id, f=0;
     system("cls");
-    printf("<== Remove Books ==>\n\n");
+    printf("                 ==================================================================\n");
+        printf("                 ||                         Remove Books                         ||\n");
+        printf("                 ==================================================================\n");
     printf("Enter Book id to remove: ");
     scanf("%d", &id);
 
@@ -178,7 +184,9 @@ void issueBook(){
     int f=0;
 
     system("cls");
-    printf("<== Issue Books ==>\n\n");
+    printf("                 ==================================================================\n");
+        printf("                 ||                         Books Issue                          ||\n");
+        printf("                 ==================================================================\n");
 
     printf("Enter Book id to issue: ");
     scanf("%d", &s.id);
@@ -221,8 +229,9 @@ void issueBook(){
 
 void issueList(){
     system("cls");
-    printf("<== Book Issue List ==>\n\n");
-
+    printf("                     ==================================================================\n");
+        printf("                     ||                        Books Issue List                      ||\n");
+        printf("                     ==================================================================\n");
     printf("%-10s %-30s %-20s %-10s %-30s %s\n\n", "S.id", "Name", "Class", "Roll", "Book Name", "Date");
 
     fp = fopen("issue.txt", "rb");
